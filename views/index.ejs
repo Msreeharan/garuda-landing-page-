@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+    }
+
+    header.main-header {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 1rem auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    .book-btn {
+      background-color: #9333ea;
+      color: #2f2323;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-section .main-container {
+    background-image: url('assets/images/car/slide-bg-41.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 100%;
+    min-height: 60vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: 24px;
+    line-height: 1.8;
+    font-weight: bold;
+    color: white;
+  }
+
+  .call-button {
+    background-color: #28a745;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+
+  .call-button:hover {
+    background-color: #218838;
+  }
+
+
+
+.glass-card {
+  background: rgba(236, 245, 234, 0.5);
+  padding: 50px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.section-title {
+  font-size: 32px;
+  color: #004d40;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.feature-box {
+  background: linear-gradient(135deg, #dbfcc0dd, #e3ffe6d9);
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: default;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+.emoji {
+  font-size: 38px;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box span {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+
+.vehicle-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.vehicle-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.vehicle-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.vehicle-scroll-track {
+  display: flex;
+  gap: 1rem;
+  animation: scroll-left 15s linear infinite;
+}
+
+.vehicle-card {
+  flex: 0 0 auto;
+  width: 150px;
+  background: #fafefb;
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.vehicle-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.vehicle-type {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.vehicle-features {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Auto Scroll Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.trust-badge {
+  text-align: center;
+  font-weight: 600;
+  margin: 2rem auto 1rem;
+  background: #f3f6f3;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 600px;
+  color: #111827;
+}
+
+.how-to-book {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.how-to-book-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 24px;
+  background: #f2ededcc;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1),
+              inset 0 0 10px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.how-to-book h3 {
+  font-size: 30px;
+  color: #1e2a38;
+  margin-bottom: 50px;
+}
+
+.how-to-book h3 span {
+  color: #ff6b00;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.step-card {
+  background: #fefefe;
+  padding: 40px 25px;
+  border-radius: 20px;
+  width: 280px;
+  box-shadow: 8px 8px 20px #d4dbe0,
+              -8px -8px 20px #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.step-icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+.step-card h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+
+.enquiry-form-section-v2 {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.enquiry-card {
+  background: rgba(227, 229, 226, 0.6);
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-title {
+  font-size: 22px;
+  color: #0b0c0f;
+  margin-bottom: 10px;
+}
+
+.form-subtext {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.enquiry-form input,
+.enquiry-form select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus {
+  outline: none;
+  border-color: #0d47a1;
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.1);
+}
+
+.enquiry-form button {
+  padding: 14px;
+  background-color: #0d47a1;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background-color: #0a357e;
+}
+
+.trip-roadmap-modern {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.trip-roadmap-modern h3 {
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #111418;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 20px;
+  max-width: 600px;
+  border-left: 4px solid #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -28px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.timeline-content {
+  background: rgb(230, 252, 222);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+
+.contact-btn {
+  background-color: #10b981;
+  color: white;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #059669;
+}
+
+.image-card img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.footer-section {
+  background-color: #1f2937; /* Tailwind's gray-800 */
+  color: #f3f4f6; /* Light text */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-section a {
+  color: #38bdf8; /* Sky blue for links */
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-content p,
+.footer-content h3 {
+  margin: 10px 0;
+}
+
+.language-support {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.powered {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  color: #9ca3af; /* Subtle gray */
+}
+
+/* Popup Overlay */
+.booking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup Card */
+.booking-popup {
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.booking-popup h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Form Fields */
+.booking-popup input,
+.booking-popup select,
+.booking-popup button {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.booking-popup button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.booking-popup button:hover {
+  background-color: #059669;
+}
+
+.banner-section {
+  padding: 20px;
+  background-color: #f8f9fc;
+}
+
+.image-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: auto;
+}
+
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-section button {
+  background-color: #f90;
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo {
+  flex-shrink: 0;
+}
+
+.main-header .logo img {
+  height: 50px;
+}
+
+.book-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+  .review-carousel-section {
+    padding: 20px;
+    background: #f7f6f6;
+  }
+
+  .review-carousel-section h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .review-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+
+  .review-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 250px;
+    min-height: 180px;
+  }
+
+  .stars {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .review {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .contact-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+ .what-you-get {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.what-you-get h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 24px;
+  justify-items: center;
+  justify-content: center; /* centers items in final row */
+  text-align: center;
+}
+
+.features-grid .feature-item:nth-child(4),
+.features-grid .feature-item:nth-child(5) {
+  grid-column: span 1; /* ensures they don’t stretch full width */
+}
+
+@media (max-width: 500px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.icon-container {
+  background: #f1f3f6;
+  border-radius: 50%;
+  padding: 12px;
+  margin-bottom: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.timeline-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--color, #ccc);
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timeline-icon {
+  font-size: 24px;
+  color: var(--color, #8E24AA);
+  flex-shrink: 0;
+}
+
+.text-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-content p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-item {
+  background: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--color, #ccc);
+  min-width: 200px;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-4px);
+}
+
+
+
+.timeline-icon {
+  font-size: 24px;
+  color: var(--color, #FB8C00);
+  flex-shrink: 0;
+}
+
+.text-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.text-content p {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 5px;
+    }
+
+    .trip-roadmap-modern {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #2c3e50;
+      position: relative;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 10%;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #e3e8ee, #c5d2e0);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+    .timeline-icon {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+      background: var(--color, #667eea);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      z-index: 10;
+      color: #fff;
+      border: 4px solid white;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: calc(50% - 60px);
+      border-left: 5px solid var(--color, #667eea);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 15px solid white;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content::after {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: 15px solid white;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+
+    .timeline-content h4 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .timeline-content p {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile Responsive - Preserve left-right layout */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* reduced space */
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-top: 10px; /* reduced space */
+    padding: 16px;
+    border-left: none;
+    border-top: 4px solid var(--color, #667eea);
+  }
+
+  .timeline-content::after {
+    display: none;
+  }
+
+  .timeline-icon {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-content {
+    padding: 12px 16px;
+  }
+
+  .timeline-content h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+  }
+
+  .timeline-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
+
+.image-banner {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+  @media (max-width: 500px) {
+  .banner-text {
+    font-size: 14px;
+    padding: 8px;
+    flex: content;
+  }
+
+  .book-btn {
+    width: 30%;
+    padding: 10px;
+  }
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column; /* ensures vertical stacking */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* space between text and button */
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.success-popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #28a745;
+  padding: 25px 40px 25px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.success-popup .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+.success-popup .close-btn:hover {
+  color: #000;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="main-header">
+  <div class="logo">
+    <a href="#"><img src="/assets/images/car/logo7.webp" alt="Logo"></a>
+  </div>
+  <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+</header>
+
+  <!-- popup bokking  Section -->
+<div class="booking-overlay" id="bookingForm">
+  <div class="booking-popup">
+    <span class="close-btn" onclick="closeBookingForm()">×</span>
+    <h3> Book Your Ride</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Pickup Location" required>
+      <input type="text" placeholder="Drop Location" required>
+      <input type="date" required>
+      <select required>
+        <option value="">Trip Type</option>
+        <option>One Way</option>
+        <option>Round Trip</option>
+        <option>Tour</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<section class="hero-section">
+  <div class="main-container">
+    <h2 class="hero-title">
+      Chennai to Tirupati Cabs Darshan from ₹2,999
+    </h2>
+
+    <ul class="features-list">
+      <li> Home Pickup Drop</li>
+      <li> Quick Darshan Support</li>
+      <li> Safe, AC Cars – Pay After Confirmation</li>
+    </ul>
+
+    <!--  Book Button -->
+        <div>
+          <a href="tel:+790287638391" class="book-btn" onclick="openBookingForm()"> call Now</a>
+        </div>
+  </div>
+</section>
+
+
+ <!-- What You Get -->
+
+<section class="what-you-get">
+  <h2>WHAT YOU GET</h2>
+  <div class="features-grid">
+    
+    <div class="feature-item">
+      <div class="icon-container">
+        <img src="assets/images/car/icon1.png" alt="Darshan Support" />
+      </div>
+      <p>Darshan Support</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-container">
+        <img src="assets/images/car/icon2.png" alt="One-Way / Round Trip" />
+      </div>
+      <p>One-Way / Round Trip</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-container">
+        <img src="assets/images/car/icon3.png" alt="Family Friendly" />
+      </div>
+      <p>Family-Friendly</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-container">
+        <img src="assets/images/car/icon4.png" alt="Pickup Time Flex" />
+      </div>
+      <p>Pickup Time Flex</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-container">
+        <img src="assets/images/car/icon5.png" alt="Verified Drivers" />
+      </div>
+      <p>Verified Drivers</p>
+    </div>
+  </div>
+</section>
+
+<!--  VEHICLE OPTIONS SECTION -->
+<section class="vehicle-section">
+  <h3 class="vehicle-heading"> VEHICLE OPTIONS</h3>
+
+  <!-- Scrollable vehicle cards container -->
+  <div class="vehicle-scroll-wrapper">
+    <div class="vehicle-scroll-track">
+      <!-- Card 1 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/swift.webp" alt="Sedan" class="vehicle-image" />
+        <div class="vehicle-type">swift – 4 Seater</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/suzuki-ertiga.webp" alt="SUV" class="vehicle-image" />
+        <div class="vehicle-type">SUV – 6-7 Seater</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/12seat.jpg" alt="Tempo" class="vehicle-image" />
+        <div class="vehicle-type">Tempo – 12+ Seater</div>
+      </div>
+        <!-- Card 1 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/swift.webp" alt="Sedan" class="vehicle-image" />
+        <div class="vehicle-type">swift – 4 Seater</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/suzuki-ertiga.webp" alt="SUV" class="vehicle-image" />
+        <div class="vehicle-type">SUV – 6-7 Seater</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="vehicle-card">
+        <img src="assets/images/car/12seat.jpg" alt="Tempo" class="vehicle-image" />
+        <div class="vehicle-type">Tempo – 12+ Seater</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Note -->
+  <div class="vehicle-features">
+    AC vehicles | Clean interiors | Baby seat on request
+  </div>
+</section>
+
+ <center>
+    <div>
+       <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+    </div>
+  </center>
+
+<!-- Trust Badge -->
+<section class="trust-badge">
+  ✅ <strong>20,000+ happy travelers served since 2012</strong>
+</section>
+
+<!-- How to Book -->
+
+<section class="how-to-book">
+  <div class="how-to-book-container">
+    
+    <h4>
+      HOW TO BOOK <br> <span>Simple 3-Step Flow</span>
+    </h4>
+
+    <br>
+
+    <div class="steps-container">
+      
+      <div class="step-card">
+        <div class="step-icon">📞</div>
+        <h4>1. Call or Submit Details</h4>
+      </div>
+
+      <div class="step-card">
+        <div class="step-icon">✅</div>
+        <h4>2. Confirm Darshan & Vehicle</h4>
+      </div>
+
+      <div class="step-card">
+        <div class="step-icon">🛋️</div>
+        <h4>3. Sit Back & Relax</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- trip timeline  -->
+
+
+<section class="trip-roadmap-modern">
+  <h3>TRIP TIMELINE – Your Trip Flow</h3>
+  <div class="timeline">
+
+    <!-- 1. Pickup -->
+    <div class="timeline-item" style="--color: #8E24AA">
+      <div class="timeline-content">
+        <div class="timeline-icon">🚕</div>
+        <div class="text-content">
+          <h4>Pickup from Home</h4>
+          <p>4:00 AM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Tirupati Arrival (Right Icon) -->
+    <div class="timeline-item" style="--color: #FB8C00">
+      <div class="timeline-content">
+        <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h4>Tirupati Arrival</h4>
+            <p>9:00 AM</p>
+          </div>
+          <div class="timeline-icon">🎯</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Darshan (Left Icon) -->
+    <div class="timeline-item" style="--color: #43A047">
+      <div class="timeline-content">
+        <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <div class="timeline-icon">🙏</div>
+          <div>
+            <h4>Darshan</h4>
+            <p>10:00 AM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Lunch Break (Right Icon) -->
+    <div class="timeline-item" style="--color: #FB8C00">
+      <div class="timeline-content">
+        <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h4>Lunch Break</h4>
+            <p>1:00 PM</p>
+          </div>
+          <div class="timeline-icon">🍱</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Return (Left Icon) -->
+    <div class="timeline-item" style="--color: #8E24AA">
+      <div class="timeline-content">
+        <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <div class="timeline-icon">🏠</div>
+          <div>
+            <h4>Return to Chennai</h4>
+            <p>6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Enquiry Form -->
+
+<section class="enquiry-form-section-v2">
+  <div class="enquiry-card">
+    <h3 class="form-title">ENQUIRY FORM</h3>
+    <p class="form-subtext">Prefer a call back? Submit and we’ll call within 5 mins.</p>
+
+    <form class="enquiry-form" onsubmit="handleEnquirySubmit(event)">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="pickup" placeholder="Pickup Area" required>
+
+      <select name="tripType" required>
+        <option value="">Trip Type</option>
+        <option value="drop">Drop</option>
+        <option value="return">Return</option>
+        <option value="tour">Tour</option>
+      </select>
+
+      <input type="date" name="travelDate" required>
+
+      <button type="submit">Submit & Request Call</button>
+    </form>
+  </div>
+</section>
+
+<!-- ✅ Success Popup -->
+<div id="successPopup" class="success-popup">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  ✅ Enquiry submitted! We’ll call you shortly.
+</div>
+
+<!-- cudtomer trust -->
+
+<section class="review-carousel-section">
+  <h3>CUSTOMER TRUST – Reviews</h3>
+
+  <div class="review-carousel" id="reviewCarousel">
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review">"Safe driver and smooth darshan – very polite!"</p>
+      <div class="name">– Ramesh K</div>
+      <button class="contact-btn">Contact</button>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review">"Booked for my mom, they took good care."</p>
+      <div class="name">– Lakshmi S</div>
+      <button class="contact-btn">Contact</button>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="review">"Fantastic service. Driver on time despite very tricky hotel location. Would definitely recommend 100%."</p>
+      <div class="name">– Archana R</div>
+      <button class="contact-btn">Contact</button>
+    </div>
+
+    <!-- Add more cards if needed -->
+  </div>
+</section>
+
+<!-- banner section -->
+
+<section>
+  <div class="popup-box">
+    <div class="image-banner">
+      <img src="/assets/images/car/cta.png" alt="Contact Banner" class="banner-img">
+      <div class="banner-text">
+        <div>
+          Taxi ₹500 OFF on Advance <br> Bookings this Week!
+        </div>
+        <div>
+          <a href="tel:+917902876383" class="book-btn" onclick="openBookingForm()"> Call Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer section -->
+<footer class="footer-section">
+  <div class="footer-content">
+    <p class="language-support"> Reach us in Tamil or English – 24x7</p>
+
+    <div class="contact-info">
+      <h3>Garuda Tours  Travels</h3>
+      <p>Call: <a href="tel:7902876383">7902876383</a></p>
+      <p><a href="https://wa.me/7902876383" target="_blank">📱 WhatsApp Link</a></p>
+    </div>
+
+    <p class="powered">Powered by <a href="https://garudatoursandtravels.com" target="_blank">GarudaToursandTravels.com</a></p>
+  </div>
+</footer>
+
+<!-- Left Floating Button (Call) -->
+<div style="position: fixed; bottom: 30px; left: 15px; z-index: 9999;">
+  <a href="tel:+917902876383">
+    <img src="/assets/images/car/call.gif" alt="Call" width="80" height="80" />
+  </a>
+</div>
+
+<!-- Right Floating Button (WhatsApp) -->
+<div style="position: fixed; bottom: 30px; right: 15px; z-index: 9999;">
+  <a href="https://wa.me/+917902876383" target="_blank">
+    <img src="/assets/images/car/whatsapp.gif" alt="WhatsApp" width="80" height="80" />
+  </a>
+</div>
+
+<script>
+  function openBookingForm() {
+    document.getElementById("bookingForm").style.display = "flex";
+  }
+
+  function closeBookingForm() {
+    document.getElementById("bookingForm").style.display = "none";
+  }
+
+      setInterval(()=>{
+      openPopup()
+    },12000)
+
+
+  const carousel = document.getElementById('reviewCarousel');
+
+  let scrollAmount = 0;
+  const scrollStep = 260; // Adjust depending on card width + gap
+  const scrollDelay = 2500; // Time between scrolls in ms
+
+  setInterval(() => {
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth) {
+      // Scroll back to start if at end
+      scrollAmount = 0;
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      scrollAmount += scrollStep;
+      carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }, scrollDelay);
+
+  function handleEnquirySubmit(event) {
+    event.preventDefault();
+
+    const popup = document.getElementById("successPopup");
+    popup.style.display = "block";
+
+    // Auto-hide popup after 3 seconds
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 3000);
+  }
+
+  function closePopup() {
+    document.getElementById("successPopup").style.display = "none";
+  }
+
+</script>
+
+
+</body>
+</html>

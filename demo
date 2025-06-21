@@ -1,0 +1,6 @@
+    setInterval(()=>{
+      openPopup()
+    },12000)
+
+
+    
