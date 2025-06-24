@@ -5,7 +5,7 @@
     }
 
     header.main-header {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(156, 155, 155, 0.4);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 1rem;
@@ -228,7 +228,7 @@
   text-align: center;
   font-weight: 600;
   margin: 2rem auto 1rem;
-  background: #f3f6f3;
+  background: #efe6e6;
   padding: 1rem;
   border-radius: 8px;
   max-width: 600px;
@@ -320,7 +320,7 @@
 
 .form-subtext {
   font-size: 16px;
-  color: #333;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -448,45 +448,92 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.footer-section {
-  background-color: #1f2937; /* Tailwind's gray-800 */
-  color: #f3f4f6; /* Light text */
-  padding: 40px 20px;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-}
+  .footer-section {
+    background-color: #1f2937; /* Dark background */
+    color: #f3f4f6;            /* Light text */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
 
-.footer-section a {
-  color: #38bdf8; /* Sky blue for links */
-  text-decoration: none;
-}
+  /* Logo Styling */
+  .logo-container {
+    margin-bottom: 20px;
+  }
 
-.footer-section a:hover {
-  text-decoration: underline;
-}
+  .footer-logo { 
+    height: 50px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Centers the logo */
+  }
 
-.footer-content p,
-.footer-content h3 {
-  margin: 10px 0;
-}
+  /* Language and Title Styling */
+  .language-support, .language-list {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 
-.language-support {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 20px;
+  .footer-title {
+    font-weight: bold;
+    color: #4cc9f0; /* Light blue */
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  /* Contact Links Styling */
+  .phone-link {
+    font-weight: bold;
+    color: #4cc9f0;
+    text-decoration: none;
+  }
+
+  .phone-link:hover {
+    text-decoration: underline;
+  }
+
+  .whatsapp-link {
+    font-weight: bold;
+    color: #25D366; /* WhatsApp green */
+    text-decoration: none;
+  }
+
+  .whatsapp-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Powered By Text Styling */
+  .powered {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .powered a {
+    color: #4cc9f0;
+    text-decoration: none;
+  }
+
+  .powered a:hover {
+    text-decoration: underline;
+  }
+
+.contact-info {
+  margin-bottom: 10px; /* Space below the contact section */
 }
 
 .contact-info h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #ffffff;
+  margin-bottom: 30px; /* Space below the title */
+}
+
+.contact-info p {
+  margin-top: 15px; /* Space above the phone number */
 }
 
 .powered {
-  font-size: 0.9rem;
-  margin-top: 30px;
-  color: #9ca3af; /* Subtle gray */
+  font-size: 14px;
+  margin-top: 15px;
 }
+
 
 /* Popup Overlay */
 .booking-overlay {
@@ -1106,4 +1153,148 @@
 
 .success-popup .close-btn:hover {
   color: #000;
+}
+
+.header-buttons {
+  display: center;
+  gap: 12px;
+}
+
+.call-btn {
+  padding: 10px 20px;
+  background-color: #4367e9; /* Green color */
+  color: white;
+  border: 2px solid #4d80ed;
+  border-radius: 6px;
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+  .popup-box {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-banner {
+  position: relative;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.offer-text {
+  padding-top: 30px; /* Space at the top of the text */
+  font-size: 24px;
+}
+
+.header-buttons {
+  margin-top: 10px; /* Space above the button */
+}
+
+.call-btn {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: white;
+  color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .offer-text {
+    font-size: 18px;
+    padding-top: 15px;
+  }
+
+  .call-btn {
+    padding: 10px 20px;
+  }
+}
+
+/* Timeline Content Layout */
+.timeline-content.row-layout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon Container with Border */
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.timeline-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Content */
+.text-content h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.text-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Section Title */
+.trip-roadmap-modern h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline-content.row-layout {
+    flex-direction: row; /* Keep the image on the left even on mobile */
+    align-items: flex-start;
+  }
+
+  .timeline-icon {
+    margin-bottom: 0;
+  }
 }
