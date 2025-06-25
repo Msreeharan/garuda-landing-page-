@@ -227,7 +227,7 @@
 .trust-badge {
   text-align: center;
   font-weight: 600;
-  margin: 2rem auto 1rem;
+  margin: 2rem auto 2rem;
   background: #efe6e6;
   padding: 1rem;
   border-radius: 8px;
@@ -1297,4 +1297,112 @@
   .timeline-icon {
     margin-bottom: 0;
   }
+}
+
+  .step-icon {
+  font-size: 45px; /* Icon size */
+  color: green; /* Icon color */
+  margin-bottom: 10px; /* Spacing below the icon */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    top: 0px !important; /* Google Translate Cleanup */
+}
+
+/* Header Styles */
+header.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.call-btn {
+    background-color: #ff7f00;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.call-btn:hover {
+    background-color: #e67300;
+}
+
+/* Popup Styles */
+.translate-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.translate-popup.active {
+    display: block;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.popup-overlay.active {
+    display: block;
+}
+
+.close-popup {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    float: right;
+}
+
+/* Google Translate Cleanup */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    font-size: 0 !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    font-size: 14px !important;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }

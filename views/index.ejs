@@ -47,16 +47,160 @@
 
   <!-- Header -->
 
-<header class="main-header">
-  <div class="logo">
-    <a href="#"><img src="/assets/images/car/logo7.webp" alt="Logo"></a>
-  </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<div class="header-buttons">
-  <a href="tel:+7902876383" class="call-btn">Call Now</a>
-</div>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-</header>
+        /* Header Styles */
+        header.main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .call-btn {
+            background-color: #ff7f00;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .call-btn:hover {
+            background-color: #e67300;
+        }
+
+        /* Popup Styles */
+        .translate-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .translate-popup.active {
+            display: block;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999;
+        }
+
+        .popup-overlay.active {
+            display: block;
+        }
+
+        .close-popup {
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+            float: right;
+        }
+
+        /* Google Translate Clean Up */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+
+        body {
+            top: 0px !important;
+        }
+
+        .goog-logo-link {
+            display: none !important;
+        }
+
+        .goog-te-gadget {
+            font-size: 0 !important;
+        }
+
+        .goog-te-gadget .goog-te-combo {
+            font-size: 14px !important;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="#"><img src="/assets/images/car/logo7.webp" alt="Logo"></a>
+        </div>
+
+        <div class="header-buttons">
+            <a href="tel:+7902876383" class="call-btn">Call Now</a>
+        </div>
+    </header>
+
+    <!-- Popup Overlay -->
+    <div id="popupOverlay" class="popup-overlay" onclick="closeTranslatePopup()"></div>
+
+    <!-- Translate Popup -->
+    <div id="translatePopup" class="translate-popup">
+        <span class="close-popup" onclick="closeTranslatePopup()">X</span>
+        <h3>Select Language</h3>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Google Translate Script -->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,hi,ml,te', // English, Hindi, Malayalam, Telugu
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- JS Functions -->
+    <script>
+        // Auto show popup when page loads
+        window.onload = function () {
+            document.getElementById('translatePopup').classList.add('active');
+            document.getElementById('popupOverlay').classList.add('active');
+        }
+
+        function closeTranslatePopup() {
+            document.getElementById('translatePopup').classList.remove('active');
+            document.getElementById('popupOverlay').classList.remove('active');
+        }
+    </script>
 
 
 <section class="hero-section">
@@ -257,7 +401,7 @@
             <p>9:00 AM</p>
           </div>
           <div class="timeline-icon">
-            <img src="/assets/images/car/arrival.png" alt="Arrival" />
+            <img src="/assets/images/car/icon8.jpg" alt="Arrival" />
           </div>
         </div>
       </div>
@@ -268,7 +412,7 @@
       <div class="timeline-content">
         <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
           <div class="timeline-icon">
-            <img src="/assets/images/car/temple.png" alt="Darshan" />
+            <img src="/assets/images/car/dharesam.jpg" alt="Darshan" />
           </div>
           <div>
             <h4>Darshan</h4>
@@ -298,7 +442,7 @@
       <div class="timeline-content">
         <div class="text-content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
           <div class="timeline-icon">
-            <img src="/assets/images/car/return.png" alt="Return" />
+            <img src="/assets/images/car/chennai2.jpg" alt="Return" />
           </div>
           <div>
             <h4>Return to Chennai</h4>
